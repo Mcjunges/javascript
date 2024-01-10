@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleição</title>
+</head>
+<body>
+    <h1>Sistema eleitoral Brasileiro</h1>
+    <p>Coloque sua idade para saber se você é obrigado a votar ou não, se se você tem a opção do voto.</p>
+    <input type="number" name="idade" id="idade">
+    <input type="button" value="Verificar" onclick="eleicao()">
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        function eleicao() {
+            var idade = document.querySelector('input#idade')
+            var res = document.getElementById('res')
+            var idade = Number(idade.value)
+            res.innerHTML = `Você tem ${idade} anos. `
+            if (idade < 16) {
+            res.innerHTML += 'Então não vota!'
+        } else if (idade < 18 || idade > 65) {
+            res.innerHTML += 'Seu voto é opcional!'
+        } else {
+            res.innerHTML += 'Seu voto é obrigatório!'
+        }
+        } 
+    </script>
+</body>
+</html>

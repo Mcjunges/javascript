@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dia de Hoje</title>
+  </head>
+  <body>
+    <h1>Que dia é Hoje?</h1>
+    <p>Clique no botão para saber que dia é hoje.</p>
+    <input
+      type="button"
+      value="Clique"
+      name="hoje"
+      id="hoje"
+      onclick="diahoje"
+    />
+    <div id="res"></div>
+
+    <script>
+          switch(dia) {
+            var hoje = new Date()
+            var dia = hoje.getDay()
+            var res = document.getElementById('res')
+            res.innerHTML = `${hoje}`
+            case 0:
+            console.log('Domingo')
+            break
+            case 1:
+            console.log('Segunda-Feira')
+            break
+            case 2:
+            console.log('Terça-Feira')
+            break
+            case 3 :
+            console.log('Quarta-Feira')
+            break
+            case 4:
+            console.log('Quinta-Feira')
+            break
+            case 5:
+            console.log('Sexta-Feira')
+            break
+            case 6:
+            console.log('Sábado')
+            break
+            default:
+            console.log('[ERROR] Dia Inválido!')
+            }
+              
+    </script>
+  </body>
+</html>

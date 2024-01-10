@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Nacionalidade</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <p>Em qual país você nasceu?</p>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="Checar" onclick="checar()">
+    <div id="res">
+        
+    </div>
+
+    <script>
+        function checar() {
+            var seupais = document.getElementById('pais')
+            var ress = document.getElementById('res')
+            var pais2 = String(seupais.value)
+            ress.innerHTML = `<p>Você nasceu em ${pais2}.</p> `            
+            if (pais2 == 'Brasil') {
+                ress.innerHTML += `<p>Então você é Brasileiro.</p>`
+            } else {
+                ress.innerHTML += `<p>Então você é Estrangeiro.</p>`
+            }
+        }
+    </script>
+
+</body>
+</html>

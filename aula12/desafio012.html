@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horário atual</title>
+</head>
+<body>
+    <h1>Que hoas são agora?</h1>
+    <p>Clique no botão e saiba que horas são.</p>
+    <input type="button" value="Clique" name="agora" id="agora" onclick="agorahora()">
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        function agorahora() {
+            var agora = new Date()
+            var hora = agora.getHours()
+            var res = document.querySelector('div#res')
+            res.innerHTML = `${agora}`
+        }
+    </script>
+</body>
+</html>
